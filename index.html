@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aghora Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+      <img class="w-16 rounded-full" src="logo.png" alt="Aghora Innovation" />
+      <a href="index.html" class="flex items-center">
+        &nbsp; &nbsp; &nbsp;
+        <span
+          class="self-center whitespace-nowrap text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+          >Aghora</span
+        >
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+        href="index.html"
+        >Home</a
+      >
+      &nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#abt"
+        >About</a
+      >&nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#ser"
+        >Service</a
+      >
+      &nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#pro"
+        >Projects</a
+      >
+      &nbsp;
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#rep"
+        >Contact</a
+      >
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <img
+            class="w-16 rounded-full"
+            src="logo.png"
+            alt="Aghora Innovation"
+          />
+          &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+          <a href="index.html" class="flex items-center">
+            <span
+              class="self-center whitespace-nowrap text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+              >Aghora</span
+            >
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#abt"
+                >About</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#ser"
+                >Service</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#pro"
+                >Projects</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#rep"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <p class="my-4 text-xs text-center text-gray-400">
+          <span>Copyright © 2025</span>
+        </p>
+      </nav>
+    </div>
+
+    <br />
+    <!-- Typewriter effect  -->
+    <div class="w-full h-full flex justify-center items-center">
+      <!-- <h1 id="typewriter" class="text-3xl font-bold"></h1> -->
+      <span
+        class="self-center whitespace-nowrap text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+        id="typewriter"
+      ></span>
+    </div>
+    <script>
+      const words = ["Jai Sri Ram", "Welcome to", " Aghora innovation"];
+      let i = 0;
+      let j = 0;
+      let currentWord = "";
+      let isDeleting = false;
+
+      function type() {
+        currentWord = words[i];
+        if (isDeleting) {
+          document.getElementById("typewriter").textContent =
+            currentWord.substring(0, j - 1);
+          j--;
+          if (j == 0) {
+            isDeleting = false;
+            i++;
+            if (i == words.length) {
+              i = 0;
+            }
+          }
+        } else {
+          document.getElementById("typewriter").textContent =
+            currentWord.substring(0, j + 1);
+          j++;
+          if (j == currentWord.length) {
+            isDeleting = true;
+          }
+        }
+        setTimeout(type, 100);
+      }
+      type();
+    </script>
+    <br />
+    <div
+      class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mx-[15px]"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        alt=""
+        class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
+      />
+      <div
+        class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+      <div
+        class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2
+            class="text-5xl font-semibold tracking-tight text-white sm:text-7xl"
+          >
+            Work with us
+          </h2>
+          <p
+            class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8"
+          >
+            "We don’t just build software. We craft intelligent experiences."
+          </p>
+        </div>
+        <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <!--<div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
+          <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
+          <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
+          <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
+        </div> -->
+          <dl
+            class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-gray-300">Projects</dt>
+              <dd class="text-4xl font-semibold tracking-tight text-white">
+                20+
+              </dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
+              <dd class="text-4xl font-semibold tracking-tight text-white">
+                10+
+              </dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-gray-300">Hours per week</dt>
+              <dd class="text-4xl font-semibold tracking-tight text-white">
+                40
+              </dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-gray-300">Paid time off</dt>
+              <dd class="text-4xl font-semibold tracking-tight text-white">
+                Unlimited
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT US  -->
+    <section class="bg-gray-100" id="abt">
+      <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div class="max-w-lg">
+            <!-- <h2 class="text-3xl font-bold text-orange-600 mb-8 text-center">
+              About Us
+            </h2> -->
+            <h2>
+              <span
+                class="text-3xl font-bold from-30% from-[#FF8E26] to-55% to-[#0163E0] inline-block bg-gradient-to-r bg-clip-text text-transparent"
+              >
+                About Us
+              </span>
+            </h2>
+            <p class="mt-4 text-gray-600 text-lg">
+              At
+              <span
+                class="self-center whitespace-nowrap text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                >Aghora innovation</span
+              >, we are passionate about turning ideas into innovative digital
+              solutions. We specialize in WordPress development, web
+              development, Android application, and iOS application solutions
+              tailored to meet your business goals. With a focus on creativity,
+              performance, and user experience, our team of experts crafts
+              responsive websites, powerful mobile apps, and dynamic digital
+              marketing strategies. Whether you're looking to build a stunning
+              WordPress site, develop a custom web platform, or launch a
+              high-performing mobile application, we've got you covered. In
+              today’s digital world, visibility is everything. That’s why we
+              offer comprehensive digital marketing and SEO services designed to
+              increase your online reach, drive traffic, and boost conversions.
+              We believe in building long-term partnerships with our clients,
+              delivering quality results on time and within budget. Let's build
+              something amazing together.
+            </p>
+          </div>
+          <div class="mt-12 md:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+              alt="About Us Image"
+              class="object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES  -->
+    <section class="py-10" id="ser">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-orange-600 mb-8 text-center">
+          <span
+            class="from-30% from-[#FF8E26] to-55% to-[#0163E0] inline-block bg-gradient-to-r bg-clip-text text-transparent"
+          >
+            Our Services
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://i.ytimg.com/vi/DDC2zVRBqcI/maxresdefault.jpg"
+              alt="wheat flour grinding"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                WordPress Development
+              </h3>
+              <p class="text-gray-700 text-base">
+                Our wheat flour grinding service provides fresh, high-quality
+                flour to businesses and individuals in the area. We use
+                state-of-the-art equipment to grind wheat into flour, and we
+                offer a variety of flours to meet the needs of our customers.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://iggmarketing.com/wp-content/uploads/2020/12/Skype_Picture_2020_12_28T07_27_57_610Z.png"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                Web Development
+              </h3>
+              <p class="text-gray-700 text-base">
+                Web development is the process of creating websites and web
+                applications that live on the internet. It includes everything
+                from building a simple static webpage to complex, interactive
+                web platforms like social networks or e-commerce sites.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://wallpaperaccess.com/full/3770579.jpg"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                Android Application
+              </h3>
+              <p class="text-gray-700 text-base">
+                Android application development is the process of creating apps
+                for devices running the Android operating system—like
+                smartphones, tablets, smart TVs, and even wearables.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://www.ardentisys.com/wp-content/uploads/2023/01/ios-app-development.png"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                IOS Application
+              </h3>
+              <p class="text-gray-700 text-base">
+                iOS application development is the process of building apps for
+                Apple devices like iPhones, iPads, Apple Watches, and Apple TVs.
+                Apps are typically distributed through the Apple App Store, and
+                the process involves a distinct set of tools, languages, and
+                guidelines compared to Android.
+              </p>
+            </div>
+          </div>
+          <!-- special card -->
+          <div
+            class="bg-white rounded-lg bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg overflow-hidden min-h-full"
+          >
+            <!-- <div class="text-center text-white font-medium">
+              Special product
+            </div> -->
+            <img
+              src="https://wallpaperaccess.com/full/8492556.png"
+              alt="Coffee"
+              class="w-full h-64 object-cover rounded-t-lg"
+            />
+            <div class="p-6 bg-white text-center rounded-b-lg md:min-h-full">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                ERP Software
+              </h3>
+              <p class="text-gray-700 text-base">
+                <!-- <span class="font-medium underline">Our speciality is</span> -->
+                Every detail matters when creating a custom ERP: the amount of
+                data you want it to handle, future growth plans,
+                industry-specific standards, your specific workflows, and
+                critical integrations. To deliver exactly what you expect, we
+                discuss all these details at the start and reflect them in your
+                system’s architecture, design, and code.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://wallpapercave.com/wp/wp3950063.jpg"
+              alt="papad"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-medium text-gray-800 mb-2">
+                Digital marketing
+              </h3>
+              <p class="text-gray-700 text-base">
+                Digital marketing is defined as the use of digital channels to
+                promote a product or service. It's the opposite of offline
+                marketing, for example. The goal of this approach is to connect
+                with customers online—the place where they spend the most time
+                seeking information or entertainment.
+                <!-- <details>
+                  <summary>Read More</summary>
+                  <p>
+                    We offer a variety of rice papad flavors, including plain,
+                    salted, spicy, and flavored. We also offer a variety of
+                    sizes and shapes to choose from. Our papad is available in
+                    bulk or in individual packages.
+                  </p>
+                </details> -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US  -->
+    <section class="text-gray-700 body-font mt-10">
+      <div
+        class="flex justify-center text-3xl font-bold text-orange-600 text-center"
+      >
+        <h2>
+          <span
+            class="text-3xl font-bold from-30% from-[#FF8E26] to-55% to-[#0163E0] inline-block bg-gradient-to-r bg-clip-text text-transparent"
+          >
+            Why Us ?
+          </span>
+        </h2>
+      </div>
+      <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-wrap text-center justify-center">
+          <div class="p-4 md:w-1/4 sm:w-1/2">
+            <div
+              class="px-4 py-6 transform transition duration-500 hover:scale-110"
+            >
+              <div class="flex justify-center">
+                <img
+                  src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
+                  class="w-32 mb-3"
+                />
+              </div>
+              <h2 class="title-font font-regular text-2xl text-gray-900">
+                Latest Technology
+              </h2>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/4 sm:w-1/2">
+            <div
+              class="px-4 py-6 transform transition duration-500 hover:scale-110"
+            >
+              <div class="flex justify-center">
+                <img
+                  src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
+                  class="w-32 mb-3"
+                />
+              </div>
+              <h2 class="title-font font-regular text-2xl text-gray-900">
+                Reasonable Rates
+              </h2>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/4 sm:w-1/2">
+            <div
+              class="px-4 py-6 transform transition duration-500 hover:scale-110"
+            >
+              <div class="flex justify-center">
+                <img
+                  src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
+                  class="w-32 mb-3"
+                />
+              </div>
+              <h2 class="title-font font-regular text-2xl text-gray-900">
+                Time Efficiency
+              </h2>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/4 sm:w-1/2">
+            <div
+              class="px-4 py-6 transform transition duration-500 hover:scale-110"
+            >
+              <div class="flex justify-center">
+                <img
+                  src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
+                  class="w-32 mb-3"
+                />
+              </div>
+              <h2 class="title-font font-regular text-2xl text-gray-900">
+                Expertise in Industry
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS  -->
+    <section class="px-4 py-12 sm:px-6 lg:px-8 " id="pro">
+        <div class="mx-auto max-w-7xl">
+          <!-- Section Header -->
+          <div class="mb-12 text-center">
+            <h2>
+                <span
+                  class="text-3xl font-bold from-30% from-[#FF8E26] to-55% to-[#0163E0] inline-block bg-gradient-to-r bg-clip-text text-transparent"
+                >
+                  Our Projects
+                </span>
+              </h2>
+            <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">Check out some of our recent works.</p>
+          </div>
+    
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Project 1 -->
+            <div class="overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:scale-105">
+              <div class="h-48 overflow-hidden bg-blue-500">
+                <img src="https://pinakshinfra.com/wp-content/uploads/2024/01/pipm-preview-1.png" alt="PIPM image" class="h-full w-full object-cover" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900">Construction website</h3>
+                <p class="mt-2 text-gray-600">A website for construction company.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">Web Design</span>
+                  <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">UX</span>
+                </div>
+                <a href="https://pinakshinfra.com/" class="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800">
+                  View website
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:scale-105">
+              <div class="h-48 overflow-hidden bg-green-500">
+                <img src="https://img.freepik.com/free-vector/muffin-american-pastry-vector-emblem-logo-template_535839-801.jpg?w=2000" alt="MUFFIN image" class="h-full w-full object-cover" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900">Mobile Application</h3>
+                <p class="mt-2 text-gray-600">A food delivery app.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-800">React Native</span>
+                  <span class="rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800">Firebase</span>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden bg-blue-500">
+                  <img src="https://www.jainkuti.in/jaikuti3logo.jpg" alt="JAIN kuti image" class="h-full w-full object-cover" />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-900">Mess website</h3>
+                  <p class="mt-2 text-gray-600">A website for mess and resturant.</p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">Web Design</span>
+                    <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">UX</span>
+                  </div>
+                  <a href="https://www.jainkuti.in/" class="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800">
+                    View website
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+          </div>
+    
+          <!-- View More Button -->
+          <!-- <div class="mt-12 text-center">
+            <a href="#" class="inline-flex items-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700"> View all projects </a>
+          </div>
+        </div> -->
+      </section>
+
+    <!-- CONTACT US  -->
+    <div class="flex items-center justify-center p-12" id="rep">
+      <div class="w-full">
+       <div class="mb-12 text-center">
+        <h2>
+            <span
+              class="text-3xl font-bold from-30% from-[#FF8E26] to-55% to-[#0163E0] inline-block bg-gradient-to-r bg-clip-text text-transparent"
+            >
+              Contact Us
+            </span>
+          </h2>
+        <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">Click on icon to start chat.</p>
+      </div>
+        <div
+          class="formbold-form-wrapper mx-auto hidden w-full max-w-[550px] rounded-lg border border-[#e0e0e0] bg-white"
+        >
+          <div
+            class="flex items-center justify-between rounded-t-lg bg-[#6A64F1] py-4 px-9"
+          >
+            <h3 class="text-xl font-bold text-white">Let's chat? - Online</h3>
+            <button onclick="chatboxToogleHandler()" class="text-white">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                class="fill-current"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <form
+            action="/repairing/"
+            method="POST"
+            class="py-6 px-9"
+            data-netlify="true"
+          >
+            <div class="mb-5">
+              <label
+                for="name"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="email"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@domain.com"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="number"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Contact no
+              </label>
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                placeholder="Enter your contact number "
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="address"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Full address
+              </label>
+              <textarea
+                rows="4"
+                name="address"
+                id="address"
+                placeholder="Explain your full address"
+                class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              ></textarea>
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="message"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Message
+              </label>
+              <textarea
+                rows="4"
+                name="message"
+                id="message"
+                placeholder="Explain your queries"
+                class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+              >
+                Start Chat
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="mx-auto mt-12 flex max-w-[550px] items-center justify-end space-x-5"
+        >
+          <button
+            class="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#6A64F1] text-white"
+            onclick="chatboxToogleHandler()"
+          >
+            <span class="cross-icon hidden">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span class="chat-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.8333 14.0002V3.50016C19.8333 3.19074 19.7103 2.894 19.4915 2.6752C19.2728 2.45641 18.976 2.3335 18.6666 2.3335H3.49992C3.1905 2.3335 2.89375 2.45641 2.67496 2.6752C2.45617 2.894 2.33325 3.19074 2.33325 3.50016V19.8335L6.99992 15.1668H18.6666C18.976 15.1668 19.2728 15.0439 19.4915 14.8251C19.7103 14.6063 19.8333 14.3096 19.8333 14.0002ZM24.4999 7.00016H22.1666V17.5002H6.99992V19.8335C6.99992 20.1429 7.12284 20.4397 7.34163 20.6585C7.56042 20.8772 7.85717 21.0002 8.16659 21.0002H20.9999L25.6666 25.6668V8.16683C25.6666 7.85741 25.5437 7.56066 25.3249 7.34187C25.1061 7.12308 24.8093 7.00016 24.4999 7.00016Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer class="flex flex-col space-y-10 justify-center m-10">
+      <nav
+        class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium"
+      >
+        <a class="hover:text-gray-900" href="index.html">Home</a>
+        <a class="hover:text-gray-900" href="#abt">About</a>
+        <a class="hover:text-gray-900" href="#ser">Services</a>
+        <a class="hover:text-gray-900" href="#rep">Contact</a>
+      </nav>
+
+      <div class="flex justify-center space-x-5">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/fluent/30/000000/instagram-new.png"
+          />
+        </a>
+        <a
+          href="https://messenger.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/fluent/30/000000/facebook-messenger--v2.png"
+          />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
+        </a>
+      </div>
+      <p class="text-center text-gray-700 font-medium">
+        &copy;Copyright © 2025. All rights reservered.
+      </p>
+    </footer>
+
+    <script>
+      const formWrapper = document.querySelector(".formbold-form-wrapper");
+      const crossIcon = document.querySelector(".cross-icon");
+      const chatIcon = document.querySelector(".chat-icon");
+      function chatboxToogleHandler() {
+        formWrapper.classList.toggle("hidden");
+        crossIcon.classList.toggle("hidden");
+        chatIcon.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
